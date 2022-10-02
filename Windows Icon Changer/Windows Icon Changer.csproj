@@ -1,10 +1,35 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
     <PropertyGroup>
-        <TargetFramework>net6.0</TargetFramework>
-        <RootNamespace>Windows_Icon_Changer</RootNamespace>
+        <TargetFramework>net6.0-windows</TargetFramework>
+        <RootNamespace>Windows.IconChanger</RootNamespace>
         <ImplicitUsings>enable</ImplicitUsings>
         <Nullable>enable</Nullable>
+        <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+        <Authors>Dinesh Solanki</Authors>
+        <Description>Library that provides utility methods to handle folder icons on windows.
+such as setFolderIcon, ConvertPngToIco</Description>
+        <PackageRequireLicenseAcceptance>true</PackageRequireLicenseAcceptance>
+        <PackageId>Nakshatra.Windows.IconChanger</PackageId>
+        <PackageLicenseExpression>Apache-2.0</PackageLicenseExpression>
+        <Title>Windows Icon Chnager Utility</Title>
+        <PackageProjectUrl>https://github.com/DineshSolanki/Windows_Icon_Changer</PackageProjectUrl>
+        <PackageReadmeFile>README.md</PackageReadmeFile>
+        <RepositoryUrl>https://github.com/DineshSolanki/Windows_Icon_Changer</RepositoryUrl>
+        <PackageTags>windows,icon,changer,png,ico,convert,hide,refresh</PackageTags>
     </PropertyGroup>
+
+    <ItemGroup>
+      <None Include="..\README.md">
+        <Pack>True</Pack>
+        <PackagePath>\</PackagePath>
+      </None>
+    </ItemGroup>
+
+    <ItemGroup>
+      <PackageReference Include="System.Drawing.Common" Version="6.0.0" />
+      <PackageReference Include="Vanara.PInvoke.Shell32" Version="3.4.8" />
+      <PackageReference Include="WinCopies.GUI.Drawing" Version="3.15.1" />
+    </ItemGroup>
 
 </Project>
